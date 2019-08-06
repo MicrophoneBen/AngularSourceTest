@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+<!--
+    * 依赖对象：完成某个特定的功能需要某个对象才能实现，这个对象就是依赖对象。
+    * 依赖注入：依赖的对象以形参的形式被注入进来使用，这种方式就是依赖注入。
+    * angular的 ‘$scope’对象就是依赖对象，并且是依赖注入的形式进行使用。
+      ！！！形参必须是特定的名称, 否则Angular无法注入抛异常
+
+    * 回调函数的event的就是依赖对象
+    * 回调函数有形参就是依赖注入
+
+    开发的两种方式
+
+    1. 命令式   更加注重的是过程，更像考试的解答题
+    2. 声明式   更加注重的是结果，更像选择题和填空题
+-->
+
+<script type="text/javascript" src="../../js/angular-1.2.29/angular.js"></script>
+<script type="text/javascript">
+  //命令式
+  var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  var arr1 = [];
+  for (var i = 0; i < arr.length; i++) {
+    var value = arr[i] + 10;
+    arr1.push(value);
+  }
+  console.log(arr1);
+  //声明式
+  var newArr = arr.map(function (value1, index) {
+    console.log(value1, index);
+    return value1 + 10;
+  });
+  console.log(newArr)
+</script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

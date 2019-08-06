@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body ng-app="myModule">
+
+<div ng-controller="myController">
+  <input type="text" ng-model="firstName">
+  <p> 您输入的firstName是: {{firstName}}</p>
+</div>
+<div ng-controller="myContr">
+  <input type="text" ng-model="lastName">
+  <p> 您输入的 lastName是: {{lastName}}</p>
+</div>
+
+<script type="text/javascript" src="../../js/angular-1.5.5/angular.js"></script>
+<script type="text/javascript">
+  angular.module("myModule", [])
+    .controller("myController", function ($scope) {
+      $scope.firstName = "kobe";
+    })
+    .controller("myContr", function ($scope) {
+    $scope.lastName = "Michael";
+  })
+</script>
+</body>
+</html>

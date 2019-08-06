@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的笔记</title>
+    <style>
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body ng-app="noteApp"  ng-controller="noteController">
+<h2>我的笔记</h2>
+<textarea cols="30px" rows="30px" ng-model="message"></textarea>
+<div>
+    <button ng-click="save()">保存</button>
+    <button ng-click="read()">读取</button>
+    <button ng-click="delete()">删除</button>
+    <p>剩余输入字数 {{count()}}</p>
+</div>
+
+<script type="text/javascript" src="../../js/angular-1.5.5/angular.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
