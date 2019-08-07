@@ -5,7 +5,7 @@ angular.module("noteApp", [])
           //切割输入的字符，准确返回数据大小
           if($scope.message.length > 100){
             $scope.message = $scope.message.slice(0,100);
-          } 
+          }
           //返回剩余输入的字数
           return 100 - $scope.message.length;
         };
